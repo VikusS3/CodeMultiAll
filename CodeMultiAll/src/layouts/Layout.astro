@@ -1,0 +1,34 @@
+---
+interface Props {
+  title: string;
+}
+
+import '@fontsource-variable/noto-sans-mono'
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="TODO" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{title}</title>
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
+<style is:global>
+  :root {
+    color-scheme: light dark;
+  }
+
+  body {
+    margin: 0;
+    font-family: 'Noto Sans Mono Variable', monospace;
+    background-color: #110f13;
+  }
+</style>
