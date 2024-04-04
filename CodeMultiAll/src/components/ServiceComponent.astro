@@ -1,7 +1,18 @@
+---
+interface Props {
+  class?: string;
+  title: string;
+  description: string;
+}
+const { title, description } = Astro.props;
+---
+
 <article
-    class={`
-        ${Astro.props}
+  class={`
+    ${Astro.props.class}
+       bg-[#18171b] text-white p-6 relative rounded-xl backdrop-blur-md border border-gray/20 overflow-hidden 
     `}
 >
-
+  <h1 class="text-4xl text-balance mb-6 font-bold uppercase">{title}</h1>
+  <p class="text-pretty opacity-90">{description}</p>
 </article>

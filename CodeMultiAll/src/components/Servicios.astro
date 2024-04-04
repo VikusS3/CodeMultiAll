@@ -1,9 +1,41 @@
 ---
-import ServiceComponent from "./ServiceComponent.astro"
+import ServiceComponent from "./ServiceComponent.astro";
 ---
 
-<section>
-    <ServiceComponent></ServiceComponent>
-    <ServiceComponent></ServiceComponent>
-    <ServiceComponent></ServiceComponent>
+<section
+  class="flex flex-col justify-center items-center w-full max-w-[1400px] py-14 mt-16"
+>
+    <h1 class="text-center sm:text-wrap uppercase md:text-6xl mb-12 font-extrabold text-4xl">Nuestros servicios</h1>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-3">
+        <ServiceComponent
+        class:list={
+         "col-start-1 col-span-3 md:col-span-1 lg:col-span-4 "
+        }
+         title="Creacion de sitios web | landing pages | E-commerce"
+         description="¿Necesitas un sitio web impresionante? Creamos sitios web, landing pages y tiendas online que destacan. Diseño único, funcionalidad impecable y soporte continuo. ¡Haz que tu presencia en línea brille hoy!"
+       />
+       <ServiceComponent 
+       class:list={
+         "col-start-1 col-span-3 md:col-span-1 lg:col-span-2"
+       }
+         title="creacion de scripts"
+         description="Creamos scripts de automatización para eficientar tu negocio. ¡Hazlo más inteligente hoy!"
+       />
+       <ServiceComponent 
+       class:list={
+         "col-start-1 col-span-3 md:col-span-1 lg:col-span-2 "
+       }
+         title="Consultorias"
+         description="¿Necesitas ayuda para mejorar tu presencia en línea? Ofrecemos consultoría en marketing digital, SEO, diseño web y más. ¡Hacemos que tu negocio brille en línea!"
+       />
+       <ServiceComponent 
+         class:list={
+             "col-start-1 col-span-3 md:col-span-1 lg:col-span-4 "
+             }
+         title="Software a medida"
+         description="¿Necesitas una solución tecnológica adaptada específicamente a tus necesidades? Creamos software a medida que impulsa tu negocio hacia el éxito. Con personalización total, tecnología de vanguardia, experiencia comprobada y soporte continuo, estamos aquí para ayudarte a llevar tu negocio al siguiente nivel."
+     
+       />
+    </div>
+  
 </section>
