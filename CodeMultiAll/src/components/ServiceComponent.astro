@@ -10,9 +10,9 @@ const { title, description } = Astro.props;
 <article
   class={`
     ${Astro.props.class}
-       bg-[#18171b] text-white p-6 relative rounded-xl backdrop-blur-md border border-gray/20 overflow-hidden 
+       bg-[#18171b] opacity-80 text-white p-6 relative rounded-xl backdrop-blur-md border border-gray/20 overflow-hidden hover:opacity-100 animate-slide-in-bottom 
     `}
 >
-  <h1 class="text-4xl text-balance mb-6 font-bold uppercase">{title}</h1>
+  <h1 class=" text-2xl text-center sm:text-left sm:text-4xl text-balance mb-6 font-bold uppercase">{title}</h1>
   <p class="text-pretty opacity-90">{description}</p>
 </article>
